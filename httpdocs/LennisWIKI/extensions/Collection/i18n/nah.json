@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fluence",
+			"Teòtlalili",
+			"Taresi",
+			"Akapochtli"
+		]
+	},
+	"coll-remove": "Ticquixtiz",
+	"coll-show": "Tiquittaz",
+	"coll-move_up": "Tictlehcahuiz",
+	"coll-move_down": "Ticpanitlaliz",
+	"coll-title": "Tōcāitl:",
+	"coll-revision": "Tlachiyaliztli: $1",
+	"coll-yes": "Quēmah",
+	"coll-no": "Ahmo",
+	"coll-cancel": "Ticcuepāz",
+	"coll-update": "Tiquiyancuīyāz",
+	"coll-print_export": "Tepoztlahcuilōliztli/tlazazacaliztli",
+	"coll-create_a_book": "Ticchihuaz ce amoxtli",
+	"coll-book_creator": "Āmoxchīuhqui",
+	"coll-download_as": "$1teuh ticmomāmaltīz",
+	"coll-bookscategory": "Amoxtin",
+	"coll-help": "Tepalehuiliztli",
+	"coll-helppage": "Help:Āmoxtli",
+	"coll-show_collection": "Xicnēxti āmoxtli"
+}

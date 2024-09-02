@@ -1,0 +1,154 @@
+<HTML>
+<HEAD>
+<TITLE>Huis Lennisheuvel - prikbord</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META NAME="description" CONTENT="Huis Lennisheuvel">
+<META NAME="keywords" CONTENT="Lennisheuvel,Boxtel,boxtelnet,digitale stad boxtel">
+<style>
+<!--
+a:link, a:visited {font-family: arial, sans-serif;  color: #000099; text-decoration: none; font-size: 9pt;}
+a:hover, a:active {font-family: arial, sans-serif;  color: #FF0000; text-decoration: underline; font-size: 9pt; }
+-->
+</style>
+
+<script type="text/javascript">
+<!-- hier vul je de namen van de afbeeldingen in -->
+var images = new Array(
+
+'pics/startglimlach.JPG',
+'pics/glimlach1.JPG',
+'pics/glimlach2.JPG',
+'pics/glimlach3.JPG',
+'pics/glimlach4.JPG',
+'pics/oud1.JPG',
+'pics/glimlach5.JPG',
+'pics/glimlach5a.JPG',
+'pics/oud3.JPG',
+'pics/glimlach6a.JPG',
+'pics/oud4.JPG',
+'pics/glimlach12.JPG',
+'pics/glimlach8.JPG',
+'pics/glimlach10.JPG',
+'pics/glimlach11.JPG',
+'pics/glimlach15.JPG',
+'pics/glimlach25.JPG',
+'pics/glimlach21.JPG',
+'pics/glimlach27.JPG',
+'pics/glimlach7.JPG',
+'pics/glimlach14.JPG',
+'pics/glimlach17.JPG',
+'pics/glimlach18.JPG',
+'pics/glimlach19.JPG',
+'pics/glimlach20.JPG',
+'pics/glimlach13.JPG',
+'pics/glimlach22.JPG',
+'pics/glimlach23.JPG',
+'pics/glimlach26.JPG',
+'pics/glimlach24.JPG'	<!-- geen komma na de laatste afbeelding -->
+);
+var teller = 1;
+var pauze = 4750;
+
+function opacWaarde(el, opacity) {
+	opacity /= 100;
+	el.style.opacity = opacity;
+	el.style.MozOpacity = opacity;
+	el.style.filter = "alpha(opacity=" + (opacity*100) + ")";}
+
+function fadeBeeld(el, currentOpacity) {
+	currentOpacity += 5;
+	if (currentOpacity > 100) {
+		opacWaarde(el, 100);
+		var prevEl = el.previousSibling ? el.previousSibling : el.parentNode.lastChild;
+		prevEl.style.visibility = 'hidden';
+		el.style.zIndex = 1;
+		window.setTimeout(startFaden, pauze);}
+	else {
+		opacWaarde(el, currentOpacity);
+		window.setTimeout(function() { fadeBeeld(el, currentOpacity); }, 50);}}
+
+function startFaden() {
+	var el = document.getElementById('beeldcontainer').childNodes[teller];
+	el.style.visibility = 'visible';
+	el.style.zIndex = 2;
+	opacWaarde(el, 0);
+	fadeBeeld(el,0);
+	teller = (teller < images.length-1) ? teller + 1 : 0;}
+
+function startScript() {
+	var el = document.getElementById('beeldcontainer');
+	while (el.firstChild) { el.removeChild(el.firstChild); }
+	for(var i=0; i<images.length; i++) {
+		var t = document.createElement('IMG');
+		t.setAttribute('src',images[i]);
+		t.style.position = 'absolute';
+		t.style.visibility = 'hidden';
+		el.appendChild(t);}
+	el.firstChild.style.visibility = 'visible';
+	window.setTimeout(startFaden, pauze);}
+	
+window.onload=startScript;	<!-- het script wordt hier gestart met onload, dit kun je wijzigen -->
+</script>
+
+</HEAD>
+<BODY bgcolor="ivory" topmargin=5>
+<body background="pics/achtergrondklaproos.JPG" bgproperties="fixed"><TABLE width="980" height="100%" valign=top align="center" cellspacing=0 cellpadding=0  border=0>
+<TR>
+<TD width=110 align=center valign=top bgcolor="#F8F4CA">
+<FONT face="mariad" color="#336699" size=4><BR>
+<IMG SRC="pics/logo.gif" width=62 height=66 alt="lennisheuvel">
+<BR><BR>
+<B>Huis<BR>&nbsp;Lennisheuvel&nbsp;</B></FONT>
+<P>
+<A HREF="sleutelkamer.htm">Sleutelkamer</A>
+<P>
+<DIV ALIGN="CENTER"><A HREF="berichten.htm"><IMG SRC="pics/eerste.jpg" border=0></A>
+<A HREF="berichten2a.htm"><IMG SRC="pics/vorige.jpg" border=0></A>
+<A HREF="berichten2b.htm"><IMG SRC="pics/volgende.jpg" border=0></A>
+<P>&nbsp;<P>&nbsp;<P>
+<embed src="pics/De glimlach van een kind.mp3" width="35" height="30" controls="smallconsole"><BR> 
+<font face="arial" font size=1 color="black">muziek aan/uit</font>
+</DIV></TD>
+
+<TD bgcolor="#F8F4CA" valign=top align=center>
+<FONT size=5 face="comic sans ms" color="#009900"><B>De glimlach van een kind</B></FONT>
+<TABLE cellspacing=5 cellpadding=0 border=0 height=30>
+<TR>
+<TD width=100 bgcolor="F5DECC" align=center><A HREF="prikbord.htm">Ons dorp</A></TD>
+<TD width=100 bgcolor="F5DECC" align=center><A HREF="agenda.htm">Agenda</A></TD>
+<TD width=100 bgcolor="F5DECC" align=center><A HREF="adressen.htm"> Adressen</A></TD>
+<TD width=100 bgcolor="F5DECC" align=center><A HREF="nieuws.htm">Nieuws</A></TD>
+<TD width=100 bgcolor="F5DECC" align=center><A HREF="links.htm">Links</A></TD>
+<TD width=100 bgcolor="F5DECC" align=center><A HREF="opinie.htm">Opinie</A></TD>
+<TD width=100 bgcolor="F5DECC" align=center><A HREF="leestafel.htm">Leestafel</A></TD></TR></TABLE>
+<TABLE width="100%" bgcolor="ivory" align=center cellspacing=0 cellpadding=20 border=0>
+<!- kolom 1 -->
+<TR><TD width="18%" align=left valign=top><FONT size=2 color="black" face="arial"><center><P><B>ZET JE MUZIEK AAN!</B>
+<P>Niet gelukkig met de foto van uzelf of uw kind op deze pagina?<BR>Mail de <A HREF="mailto:wijkberaad@lennisheuvel.nl"><B>huismeester</B></A>
+
+ en de foto wordt direct verwijderd.
+</TD>
+
+ <!- kolom 2 --> 
+<TD width="75%" align=left valign=top><FONT size=4 color="#000000" 
+face="arial"> <P>
+
+<div id="beeldcontainer">
+  <img src="pics/startglimlach.JPG"> <!-- naam van de eerste foto -->
+</div>
+
+<P>
+<FONT size=3 color="black" 
+
+</TD>
+<!- kolom 3 -->
+<TD width="7%" valign=top><FONT size=2 color="#000000" face="arial">
+<font face="comic sans ms" font color="red"><H3>
+<P>
+<font face="comic sans ms" font color="red"><H3>
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</BODY>
+</HTML>
+
+

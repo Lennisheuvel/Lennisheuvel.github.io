@@ -1,0 +1,18 @@
+# -FrontPage-
+
+Options None
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+require group administrators
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthType Basic
+AuthName www.lennisheuvel.nl
+AuthUserFile /home/.sites/26/site164/web/_vti_pvt/service.pwd
+AuthGroupFile /home/.sites/26/site164/web/_vti_pvt/service.grp
